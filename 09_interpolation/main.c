@@ -222,12 +222,6 @@ int interpolation(int elem, int cnn[72][3], double node_coord_x[49], double node
     /*utildeメッシュ内近似値を格納する配列を初期化*/
     for (int i=0; i<55; i++) for (int j=0; j<55; j++) utilde[i][j] = 0;
 
-    /*可視化する座標を設定*/
-    double utilde_coord_x[3025];
-    double utilde_coord_y[3025];
-    for (int p=0; p<3025; p++) utilde_coord_x[p] = (p%55)/54.0;
-    for (int p=0; p<3025; p++) utilde_coord_y[p] = (p/55)/54.0;
-
     int node[3];
     for (int i=0; i<3; i++) node[i] = cnn[elem][i];
 
